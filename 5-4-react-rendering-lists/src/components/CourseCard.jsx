@@ -30,6 +30,11 @@ export default function CourseCard({ course, index, onMutateCourse }) {
             - course has tasks AND
             - all tasks are done
             Use logical && */}
+        {course.tasks.length > 0 &&
+          course.tasks.every((task) => task.isDone) && (
+            <span className="badge">All caught up</span>
+          )}
+        {course.tasks.length === 0 && <p className="muted">No tasks yet.</p>}
       </header>
 
       <section className="tasksSection">
