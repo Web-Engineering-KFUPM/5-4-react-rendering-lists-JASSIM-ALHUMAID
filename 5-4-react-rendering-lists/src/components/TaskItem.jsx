@@ -17,6 +17,7 @@ export default function TaskItem({ task, onToggle, onDelete }) {
             Example:
               <span className="title">{task.title}</span> */}
       </label>
+      <span className="title">{task.title}</span>
 
       {/* TODO (TASK 4): Delete button calls onDelete(task.id) on click */}
       <button className="ghost" aria-label="Delete task">
